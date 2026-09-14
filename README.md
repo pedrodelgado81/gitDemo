@@ -2,6 +2,28 @@
 ## Repositorio de demostración de uso de GIT
 Este repositorio no es de un proyecto de código fuente. Se limita a contener los ficheros y ramas necesarios para operar con git
 
+## Estructura del repositorio
+```
+[ Remoto / Git Repository ]
+ 
+       (Protegida: Solo Pull Request)
+ ┌─────────────────────────────────────────┐
+ │               main                      │  <-- Producción
+ └─────────────────────────────────────────┘
+                    ▲
+                    │ (Protegido: Pull Request obligatorio)
+ ┌─────────────────────────────────────────┐
+ │              staging                    │  <-- Preproducción
+ └─────────────────────────────────────────┘
+                    ▲
+                    │ (Protegido: Pull Request obligatorio)
+ ┌─────────────────────────────────────────┐
+ │              develop                    │  <-- Desarrollo
+ └─────────────────────────────────────────┘
+                    ▲
+                    │ (git push / commits directos)
+            [ Tu Entorno Local ]
+```
 
 ## Recursos
 - Simulador de git: https://learngitbranching.js.org/?NODEMO=&locale=es_ES
